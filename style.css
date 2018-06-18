@@ -1,8 +1,37 @@
-#main {
-	margin: 0px auto;
-	width: 250px;
-	border: 1px solid #f1f1f1;
-	padding: 15px;
-	text-align: center;
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
+#main {
+	margin: 15px auto;
+	width: 280px;
+	border: 1px solid #f1f1f1;
+	padding:15px;
+}
+h1 {
+	font-size:18px;
+	font-weight:700;
+	text-align:center;
+}
+#submit_box .title{
+	margin-bottom:5px;
+	padding:10px;
+	width:40%;
+	background-color:#ccc;
+}
+#submit_box input{
+	padding:10px;
+	width:60%;
+	background-color:#f1f1f1;
+	border:0;
+}
+.r { 
+	float:right;
+}
+.l { 
+	float:left;
+}
+.c { 
+	clear:both;
+}
