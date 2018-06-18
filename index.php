@@ -11,40 +11,30 @@
     </head>
 <body>
     <div id="main">
-   	  <h1>Create a new Advertisement</h1>
-      <div id="submit_box">
-
-          <div class="l title">Ad-Name</div>
-          <input class="r" id="ad-name" value="">
-
-          <div class="c"></div>
-
-          <div class="l title">Ad-Size</div>
-          <input class="r" id="ad-size" value="">
-
-          <div class="c"></div>
-
-          <div class="l title">Ad-Image</div>
-          <input class="r" id="ad-image" value="">
-
-          <div class="c"></div>
-
-          <div class="l title">Price</div>
-          <input class="r" id="ad-price" value="">
-
-          <div class="c"></div>
-
-          <div class="l title">Rules</div>
-          <input class="r" id="ad-rules" value="">
-
-          <div class="c"></div>
-
-          <div class="l title">Ad-Website</div>
-          <input class="r" id="ad-website" value="http://www.xyz.com">
-
-          <div class="c"></div>
-
-      </div>
+        <h1>Create a new Advertisement</h1>
+        <div id="submit_box">
+            
+            <div class="title">Name:</div>
+            <input id="name" value="">
+            
+            <div class="title">Ad Size & Website:</div>
+            <select name="ad-size-website">
+                <option value="120x600">120x600 | www.ads.com</option>
+                <option value="160x600">160x600 | www.ads.com</option>
+                <option value="728x90">728x90 | www.ads.com</option>
+            </select>
+            
+            <div class="title">Ad Image:</div>
+            <input type="file" id="ad-image" value="">
+            
+            <div class="title">Ad Url:</div>
+            <input id="url" value="" placeholder="http://www.yourwebsite.com">
+            
+            <div class="title">Price:</div>
+            
+            <div class="title">Rules:</div>
+	        
+        </div>
   </div>
 </body>
 </html>
