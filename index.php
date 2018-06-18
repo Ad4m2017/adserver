@@ -14,14 +14,14 @@
         <h1>Create a new Advertisement</h1>
         <div id="submit_box">
             
-            <div class="title">Name:</div>
-            <input id="name" value="">
+            <div class="title">Ad Title:</div>
+            <input id="ad-title" value="">
             
-            <div class="title">Ad Size & Website:</div>
-            <select name="ad-size-website">
-                <option value="120x600">120x600 | www.ads.com</option>
-                <option value="160x600">160x600 | www.ads.com</option>
-                <option value="728x90">728x90 | www.ads.com</option>
+            <div class="title">Ad Size:</div>
+            <select name="ad-size">
+                <option value="120x600">120x600</option>
+                <option value="160x600">160x600</option>
+                <option value="728x90">728x90</option>
             </select>
             
             <div class="title">Ad Image:</div>
@@ -29,13 +29,34 @@
             
             <div class="title">Ad Url:</div>
             <input id="url" value="" placeholder="http://www.yourwebsite.com">
+
+            <div class="title">Display Ad on Follow Website:</div>
+            <select name="ad-size">
+                <option value="www.xyz.com">www.xyz.com</option>
+                <option value="www.abc.info">www.abc.info</option>
+                <option value="www.123.net">www.123.net</option>
+            </select>
+            <div class="title">Date + Price:</div>
+            <select name="date" multiple>
+                <option value="19.06.2018">19.06.2018 | 1 USD</option>
+                <option value="20.06.2018">20.06.2018 | 1 USD</option>
+                <option value="21.06.2018">21.06.2018 | 1 USD</option>
+                <option value="22.06.2018">22.06.2018 | 1 USD</option>
+                <option value="23.06.2018">23.06.2018 | 1 USD</option>
+            </select>
             
             <div class="title">Price:</div>
             
-            <div class="title">Rules:</div>
+            <div class="title" style="text-align:center;">
+            	Rules:
+                <div style="font-size:12px;"> - No Alcohol!<br /> - No Racism! 
+                <br /> - No Erotic!<br /> - No Gambling!</div>
+
+            </div>
+            
+            <input type="submit">
 	        
         </div>
   </div>
 </body>
 </html>
-

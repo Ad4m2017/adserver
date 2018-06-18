@@ -21,6 +21,7 @@ h1 {
 #submit_box input,#submit_box select{
 	width:100%;
 	margin-bottom:20px;
+	padding:5px 0px;
 	/*
 	background-color:#f1f1f1;
 	border:0;
