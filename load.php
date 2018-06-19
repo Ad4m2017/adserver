@@ -6,9 +6,13 @@ sleep(2);
 
 switch ($step) {
 	case 1:
-		$websites 		= array( 1=>"www.abcefgh.com" , 2=>"www.123456790.com" , 3=>"www.xyz.com" );
-		$websites_json 	= json_encode($websites);
-		echo $websites_json;
+		echo '<div class="title">Select Website:</div>';
+		echo '<select id="ad-website">';
+		echo '	<option value="" selected disabled></option>';
+		echo '	<option value="www.xyz.com">www.xyz.com</option>';
+		echo '	<option value="www.xyz.com">www.sasd.com</option>';
+		echo '	<option value="www.xyz.com">www.32f2.com</option>';
+		echo '</select>';
 		break;
 	case 2:
 		echo "i ist gleich 1";

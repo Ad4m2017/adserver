@@ -27,8 +27,8 @@ $( document ).ready(function() {
 		window.location.reload(true);
 	});
 
-	$("#ad-website").change(function() {
-		loading( 1 , 0 , $("#ad-website") );
+	$(document).on("change", '#ad-website', function(event) { 
+		loading( 2 , 0 , $("#ad-website") );
 	});
 
 	function loading( nr , x , obj ) {
@@ -40,16 +40,19 @@ $( document ).ready(function() {
 		$("#objectID").load( "load.php", { step: nr } );
 		$.post( "load.php", { step: nr, value: x })
 		.done(function( data ) {
-			alert( data );
+			//alert(data);
+			$("#insert").before(data);
 		})
 		.fail(function() {
-			alert( "error" );
+			//alert("error");
+			$("#insert").before("Error! Please Restart!");
 		})
 		.always(function() {
-			//alert( "finished" );
+			//alert("finished");
 			$("#loading").hide();
 			//obj.removeAttr('disabled');
-		});			
+		});
+					
 	};
 	
 });
@@ -62,6 +65,8 @@ $( document ).ready(function() {
 
         	<div style="text-align:center;"><button id="btn_start">Start</button></div>
 
+			<div id="insert"></div>
+            
             <!--
             <div class="title">Select Website:</div>
             <select id="ad-website">
@@ -71,6 +76,7 @@ $( document ).ready(function() {
                 <option value="www.123.net">www.123.net</option>
             </select>
 			-->
+            
         	<div style="text-align:center;margin:15px;"><img id="loading" /></div>
         	<div style="text-align:center;"><button id="btn_restart">Restart</button></div>
 
