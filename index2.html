@@ -16,6 +16,17 @@ $( document ).ready(function() {
 	$("#loading").hide();
 	$("#loading").attr("src", base64image_loading);
 
+	$("#btn_restart").hide();
+
+	$("#btn_start").click(function() {
+		$("#btn_start").hide();
+		loading( 1 , 0 , $("#btn_start") );
+	});
+
+	$("#btn_restart").click(function() {
+		window.location.reload(true);
+	});
+
 	$("#ad-website").change(function() {
 		loading( 1 , 0 , $("#ad-website") );
 	});
@@ -24,19 +35,21 @@ $( document ).ready(function() {
 
 		obj.attr("disabled","disabled");
 		$("#loading").show();
+		$("#btn_restart").show()
 
-		$.post( "json.php", { step: nr, value: x })
-			.done(function( data ) {
-				alert( data );
-			})
-			.fail(function() {
-				alert( "error" );
-			})
-			.always(function() {
-				//alert( "finished" );
-				$("#loading").hide();
-				//obj.removeAttr('disabled');
-			});			
+		$("#objectID").load( "load.php", { step: nr } );
+		$.post( "load.php", { step: nr, value: x })
+		.done(function( data ) {
+			alert( data );
+		})
+		.fail(function() {
+			alert( "error" );
+		})
+		.always(function() {
+			//alert( "finished" );
+			$("#loading").hide();
+			//obj.removeAttr('disabled');
+		});			
 	};
 	
 });
@@ -47,6 +60,9 @@ $( document ).ready(function() {
         <h1>Create a new Advertisement</h1>
         <div id="submit_box">
 
+        	<div style="text-align:center;"><button id="btn_start">Start</button></div>
+
+            <!--
             <div class="title">Select Website:</div>
             <select id="ad-website">
                 <option value="" selected disabled></option>
@@ -54,8 +70,9 @@ $( document ).ready(function() {
                 <option value="www.abc.info">www.abc.info</option>
                 <option value="www.123.net">www.123.net</option>
             </select>
-
-        	<div style="text-align:center;"><img id="loading" /></div>
+			-->
+        	<div style="text-align:center;margin:15px;"><img id="loading" /></div>
+        	<div style="text-align:center;"><button id="btn_restart">Restart</button></div>
 
         </div>
   </div>
