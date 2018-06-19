@@ -2,6 +2,7 @@
 <html>
     <head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title></title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -39,7 +40,7 @@
             <div class="title">Date + Price:</div>
             <select name="date" multiple>
                 <option value="19.06.2018">19.06.2018 | 1 USD</option>
-                <option value="20.06.2018">20.06.2018 | 1 USD</option>
+                <option value="20.06.2018" disabled>20.06.2018 | 1 USD</option>
                 <option value="21.06.2018">21.06.2018 | 1 USD</option>
                 <option value="22.06.2018">22.06.2018 | 1 USD</option>
                 <option value="23.06.2018">23.06.2018 | 1 USD</option>
