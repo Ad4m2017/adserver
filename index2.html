@@ -31,6 +31,10 @@ $( document ).ready(function() {
 		loading( 2 , 0 , $("#ad-website") );
 	});
 
+	$(document).on("change", '#ad-size', function(event) { 
+		loading( 3 , 0 , $("#ad-size") );
+	});
+
 	function loading( nr , x , obj ) {
 
 		obj.attr("disabled","disabled");
@@ -63,22 +67,12 @@ $( document ).ready(function() {
         <h1>Create a new Advertisement</h1>
         <div id="submit_box">
 
-        	<div style="text-align:center;"><button id="btn_start">Start</button></div>
+        	<div style="text-align:center;"><div id="btn_start" class="green_button">Start</div></div>
 
 			<div id="insert"></div>
             
-            <!--
-            <div class="title">Select Website:</div>
-            <select id="ad-website">
-                <option value="" selected disabled></option>
-                <option value="www.xyz.com">www.xyz.com</option>
-                <option value="www.abc.info">www.abc.info</option>
-                <option value="www.123.net">www.123.net</option>
-            </select>
-			-->
-            
-        	<div style="text-align:center;margin:15px;"><img id="loading" /></div>
-        	<div style="text-align:center;"><button id="btn_restart">Restart</button></div>
+        	<div class="txt-c" style="margin:15px;"><img id="loading" /></div>
+        	<div class="txt-c""><div id="btn_restart" class="black_button">Restart</div></div>
 
         </div>
   </div>

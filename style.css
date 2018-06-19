@@ -18,7 +18,7 @@ h1 {
 #submit_box .title{
 	/* background-color:#ccc; */
 }
-#submit_box input,#submit_box select{
+#submit_box input, #submit_box select{
 	width:100%;
 	margin-bottom:20px;
 	padding:5px 0px;
@@ -43,3 +43,47 @@ h1 {
 .c { 
 	clear:both;
 }
+.txt-c {
+	text-align:center;
+}
+.green_button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+}
+.red_button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+}
+.black_button {
+    background-color: #555555;
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+}
+
+
