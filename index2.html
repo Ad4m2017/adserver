@@ -34,6 +34,16 @@ $( document ).ready(function() {
 	$(document).on("change", '#ad-size', function(event) { 
 		loading( 3 , 0 , $("#ad-size") );
 	});
+	
+	$(document).on("change", '#ad-dates', function(event) { 
+		$('#ad-dates option:selected', document).each(function(){
+			//alert($(this).attr( "data-price" ));
+			//alert($("#ad-dates").attr("data-price"));
+			//var option = $('option:selected', this).attr('data-price');
+			//alert(option);
+			alert(this.attr('data-price'));
+		});
+	});
 
 	function loading( nr , x , obj ) {
 
