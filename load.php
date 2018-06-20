@@ -33,8 +33,7 @@ switch ($step) {
 		echo '		<option data-price="1" value="22.06.2018">22.06.2018 | 1 USD</option>';
 		echo '		<option data-price="1" value="23.06.2018">23.06.2018 | 1 USD</option>';
 		echo '	</select>';
-		echo '<div class="txt-c">Price:<span id="price">0 USD</span></div>';
-		echo '<div class="txt-c"><div id="btn_save" class="green_button">Save</div></div>';
+		echo '<div class="txt-c"><div id="btn_save_and_pay" class="green_button">Pay 0 USD</div></div>';
 		break;
 	default:
 		//echo "i ist nicht gleich 0, 1 oder 2";

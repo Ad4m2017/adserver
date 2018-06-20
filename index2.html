@@ -27,6 +27,10 @@ $( document ).ready(function() {
 		window.location.reload(true);
 	});
 
+	$(document).on("click", '#btn_save_and_pay', function(event) { 
+		alert('save & pay!');
+	});
+
 	$(document).on("change", '#ad-website', function(event) { 
 		loading( 2 , 0 , $("#ad-website") );
 	});
@@ -36,13 +40,12 @@ $( document ).ready(function() {
 	});
 	
 	$(document).on("change", '#ad-dates', function(event) { 
-		$('#ad-dates option:selected', document).each(function(){
-			//alert($(this).attr( "data-price" ));
-			//alert($("#ad-dates").attr("data-price"));
-			//var option = $('option:selected', this).attr('data-price');
-			//alert(option);
-			alert(this.attr('data-price'));
+		price = 0;
+		$('#ad-dates option:selected').each(function(){
+			price = price + Number($(this).attr('data-price'));
 		});
+		//alert(price);
+		$("#btn_save_and_pay").text("Pay " + price + " USD");
 	});
 
 	function loading( nr , x , obj ) {
