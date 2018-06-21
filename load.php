@@ -27,12 +27,11 @@ switch ($step) {
 	case 3:
 		echo '<div class="title">Select Date(s):</div>';
 		echo '	<select id="ad-dates" multiple>';
-		echo '		<option data-price="1" value="19.06.2018">19.06.2018 | 1 USD</option>';
-		echo '		<option data-price="1" value="20.06.2018" disabled>20.06.2018 | 1 USD</option>';
-		echo '		<option data-price="1" value="21.06.2018">21.06.2018 | 1 USD</option>';
-		echo '		<option data-price="1" value="22.06.2018">22.06.2018 | 1 USD</option>';
-		echo '		<option data-price="1" value="23.06.2018">23.06.2018 | 1 USD</option>';
-		echo '	</select>';
+		for ($i = 0; $i <= 90; $i++) {
+			$date = date("D, d-m-Y", time() + (86400 * $i));
+			echo '		<option data-price="1" value="' . $date . '">' . $date . ' | 1 USD</option>';
+		}
+	echo '	</select>';
 		echo '<div class="txt-c"><div id="btn_save_and_pay" class="green_button">Pay 0 USD</div></div>';
 		break;
 	default:
