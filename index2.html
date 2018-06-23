@@ -54,8 +54,8 @@ $( document ).ready(function() {
 		$("#loading").show();
 		$("#btn_restart").show()
 
-		$("#objectID").load( "load.php", { step: nr } );
-		$.post( "load.php", { step: nr, value: x })
+		//$("#objectID").load( "adserver.php", { step: nr } );
+		$.post( "adserver.php", { step: nr, value: x })
 		.done(function( data ) {
 			//alert(data);
 			$("#insert").before(data);
